@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Register With Us</title>
+    </head>
+        <body>
+        <header id="top">
+            <h1>Veridian Dynamics</h1>
+            <h2><em>We are happy to be your support!</em></h2>
+            <hr/>
+        </header>
+            <form method="post" action="http://requestbin.fullcontact.com/1o6z6a31">
+                <h3>Registration.</h3>
+
+                <label for="email">Email Address</label>
+                <input id="email" type="text" name="Email Address" placeholder="Enter your email address.">
+                <br>
+                <br>
+                <label for="password">Password</label>
+                <input id="password" type="password" name="PWD" placeholder="It's masked">
+                <br>
+                <br>
+                <label for="biography">Biography</label>
+                <textarea id="biography" name="BIO" placeholder="Tell us a little about yourself." rows="5" cols="50" wrap="hard"></textarea>
+                <br>
+                <br>
+                <hr/>
+
+                <h3>How did you hear about us?</h3>
+
+                    <label for="r1"><em>Select one of the following.</em></label><br><br>
+                    <input type="radio" id="r1" name="hearaboutus" value="Billboard">Billboard<br>
+                    <input type="radio" id="r1" name="hearaboutus" value="Radio Advertisement">Radio Advertisement<br>
+                    <input type="radio" id="r1" name="hearaboutus" value="Internet Advertisement">Internet Advertisement<br>
+                    <input type="radio" id="r1" name="hearaboutus" value="Other">Other<br>
+                    <hr/>
+
+                <h3>What type of Operating System do you use?</h3>
+                <label for="choose">Please select, from the following:</label>
+                <select id="choose" name="Your OS">
+                    <option value="blank"></option>
+                    <option value="linux">Linux</option>
+                    <option value="Mac">MAC</option>
+                    <option value="Windows">Windows</option>
+                </select>
+                <br>
+                <br>
+                <button type="submit">Submit the form</button><br>
+            </form>
+
+            <br>
+            <a href="#top">Back to the top.</a>
+        </body>
+</html>
+
+<!--Create a file named forms.html.
+
+Using what you have learned in the previous lessons, add the necessary HTML document structure to the page with a title of: "Register With Us".
+
+Create an empty form element. We will be adding to this throughout the exercise.
+
+Go to RequestBin in order to generate a URL that you can send data to. Click 'Create A RequestBin' and copy and paste the generated URL into the the action attribute of your form.
+
+Below is an example. Your RequestBin URL will be unique, but will look very similar to the one below.
+
+
+<form method="POST" action="http://requestb.in/109a25d1">
+Create text fields for email and password with appropriate placeholder values.
+
+Create a textarea named "bio". This is for the user to fill out a short description of themselves.
+
+Create a "How did you hear about us" section that contains radio buttons. The values should be "billboard", "radio advertisement", "internet advertisement", and "other". Only one of the values should be allowed to be selected at a time.
+
+What happens if the inputs are given different name attributes? Radio buttone: you can select them all
+Change these inputs so that multiple answers are allowed to be selected.
+Create a dropdown that asks the user what web browser they are using.-->
