@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Search</title>
+</head>
+<body>
+    <h1>Property Search</h1>
+
+        <form>
+
+            <label for="prop">Property Type</label>
+            <select id="prop" name="propertytype">
+                <option value="blank"></option>
+                <option value="towncondo">Townhome/Condo</option>
+                <option value="lot">Lot</option>
+                <option value="single">Single Family Dwelling</option>
+                <option value="multi">Multi Family Dwelling</option>
+            </select><br><br>
+
+            <label for="sqft">Square Footage</label>
+            <select id="sqft" name="squarefoot">
+                <option value="blank"></option>
+                <option value="500">500 - 1500</option>
+                <option value="1501">1501 - 2500</option>
+                <option value="2501">2501 - 3500</option>
+                <option value="3501">3501 - 4500</option>
+                <option value="4501">4501 - 5500</option>
+            </select><br><br>
+
+            <label for="min">Min Price</label>
+            <input id="min" type="number" name="minprice" value="0" min="0" max="1000" step="100"><br><br>
+            <label for="max">Max Price</label>
+            <input id="max" type="number" name="maxprice" value="100000" min="100000" max="200000" step="1000"><br><br>
+
+            <label for="bed">Beds</label>
+            <input id="bed" type="range" name="beds" min="0" max="4" step="1"><br><br>
+            <label for="bath">Baths</label>
+            <input id="bath" type="range" name="baths" min="0" max="4" step="1"><br><br>
+
+            <label for="zip">Zipcode</label>
+            <input id="zip" type="number" name="zipcode"><br><br>
+            <button type="submit">Search now</button>
+        </form>
+</body>
+</html>
+
+<!--3. Make a file named property-search.html
+- This will be a form for a property search.
+- Add all the appropriate inputs you would need to conduct a property search:
+- Property type, square footage, min_price, max_price, zipcode, # of bedrooms, # of bathrooms, etc...
+- The submit button's text should say "Search now"
+5. Commit all your work and push to GitHub :)-->

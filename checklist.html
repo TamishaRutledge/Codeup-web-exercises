@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+        <form>
+            <label for="c1">Card Type</label><br>
+                <input type="radio" id="c1" name="card" value="Visa">Visa<br>
+                <input type="radio" id="c1" name="card" value="MC">Master Card<br>
+                <input type="radio" id="c1" name="card" value="AmEx">American Express<br>
+                <input type="radio" id="c1" name="card" value="Discover">Discover<br><br>
+            <label for="CC">Credit Card Number</label>
+                <input id="CC" type="number" min="0" max="9999999999999999" required><br><br>
+            <label for="Exp">Expiration Month/Year</label>
+                <input id="Exp" type="month" name="expmon" required><br><br>
+            <label for="SC">Security Code</label>
+                <input id="SC" type="number" value="0" min="0" max="999"><br><br>
+            <label for="future">Keep this credit card on file for future transactions</label>
+                <input id="future" type="checkbox"><br><br>
+            <p>Billing information</p>
+            <label for="sa">Street Address</label>
+                <input id="sa" type="text" name="streetadd" required>
+            <label for="c">City</label>
+                <input id="c" type="text" name="city" required>
+            <label for="s">State</label>
+                <input id="s" type="text" name="state" required>
+            <label for="zip">Zipcode</label>
+                <input id="zip" type="number" name="zipcode"><br><br>
+            <button>Buy Now</button>
+        </form>
+</body>
+</html>
+
+<!--4. Make a file named checkout.html
+- This will be a form for a credit card checkout
+- Make all fields required except for the checkbox
+- Add an input for credit card number, expiration month/year, security code
+- Add inputs for billing address
+- Add a checkbox that says "Keep this credit card on file for future transactions"
+- The submit button's text should say "Buy Now!"
+5. Commit all your work and push to GitHub :)-->
