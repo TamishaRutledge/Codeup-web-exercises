@@ -6,42 +6,28 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
-.message.message-info {
-    background-color: rgb(205, 222, 252);
-    color: hsl(246, 47%, 41%);
+.message {
     margin: 20px;
     padding: 10px;
     border: 1px;
     border-radius: 10px;
-
+}
+.message.message-info {
+    background-color: #CDDEFC;
+    color: #41379A;
 }
 
 .message.message-success {
-    background-color: hsl(138, 60%, 88%);
-    color: hsl(130, 36%, 34%);
-    margin: 20px;
-    padding: 10px;
-    border: 1px;
-    border-radius: 10px;
-
+    background-color: #CEF3D9;
+    color: #377642;
 }
 
 .message.message-warning {
-    background-color: hsl(59, 89%, 89%);
-    color: hsl(47, 58%, 33%);
-    margin: 20px;
-    padding: 10px;
-    border: 1px;
-    border-radius: 10px;
-
+    background-color: #FCFBCA;
+    color: #857023;
 }
 
 .message.message-error {
-    background-color: hsl(355, 76%, 90%);
-    color: hsl(352, 60%, 31%);
-    margin: 20px;
-    padding: 10px;
-    border: 1px;
-    border-radius: 10px;
-
+    background-color: #F7D2D5;
+    color: #7E202C;
 }
