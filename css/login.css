@@ -11,7 +11,7 @@ body, html {
 }
 
 form {
-    height: 1em;
+    margin: 1em;
     padding: 1em;
     /* This form should be separated from other elements by 1em */
     /* There must be 1em between the content and the border of this element */
@@ -22,6 +22,7 @@ fieldset {
     -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     padding: 1em;
+    border: none;
     background-color: #FFFFFF;
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
@@ -57,10 +58,8 @@ fieldset {
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Calculate based on the padding of the `.btn` class */
     width: 100%;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    margin-top: .5em;
-    margin-bottom: .5em;
+    padding: 4px 0;
+    margin: .5em 0;
     width: calc(100% - 4px);
 
 }
