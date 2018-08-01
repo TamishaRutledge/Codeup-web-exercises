@@ -40,12 +40,17 @@
     width: 12.5%;
 }
 
+.column.one-sixteenth {
+    width: 6.25%;
+}
+
 @media screen and (max-width: 600px) {
     .column.one-half,
     .column.one-third,
     .column.one-quarter,
     .column.one-sixth,
-    .column.one-eighth {
+    .column.one-eighth,
+    .column.one-sixteenth {
         width: 100%;
     }
     
