@@ -15,6 +15,9 @@
     <!--nav items should collapse into a toggle bar on mobile-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Pizza World</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -23,11 +26,11 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Apps</a>
+                    <a class="dropdown-item" href="#">'Apps</a>
                     <a class="dropdown-item" href="#">Pizza</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Drinks</a>
-                    <a class="dropdown-item" href="#">Dessert</a>
+                    <a class="dropdown-item" href="#">'Zerts</a>
                 </div>
             </li>
                 <form class="form-inline my-2 my-lg-0">
@@ -39,7 +42,7 @@
         </div>
     </nav>
     <!--</div>-->
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid d-none d-lg-block">
         <div class="container-fluid p-0">
         <!--Hide on mobile-->
         <div class="card text-black p-0">
@@ -50,7 +53,83 @@
         </div>
         </div>
     </div>
-
+    <h2>Build your own pizza!</h2>
+        <ul class="nav nav-tabs flex-column flex-sm-row">
+            <li class="nav-item">
+                <a class="flex-sm-fill nav-link" href="#"><span class="badge badge-pill badge-secondary">1</span>Size and Crust</a>
+            </li>
+            <li class="nav-item">
+                <a class="flex-sm-fill nav-link" href="#"><span class="badge badge-pill badge-secondary">2</span>Cheese and Sauce</a>
+            </li>
+            <li class="nav-item">
+                <a class="flex-sm-fill nav-link" href="#"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+            </li>
+        </ul>
+    <div class="card">
+        <h5 class="card-header bg-primary text-white">Choose your size and crust</h5>
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header">Hand Tossed</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste</li>
+                    <li class="list-group-item"><input type="radio" id="customRadio1" name="customRadio" class="custome-control-label"><label class="custome-control-label" for="customRadio1">Small (10")</li>
+                    <li class="list-group-item"><input type="radio" id="customRadio2" name="customRadio" class="custome-control-label"><label class="custome-control-label" for="customRadio2">Medium (12")</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-header">Crispy Thin</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
+                    <li class="list-group-item"><input type="radio" id="customRadio3" name="customRadio" class="custome-control-label"><label class="custome-control-label" for="customRadio3">Medium (12")</li>
+                    <li class="list-group-item"><input type="radio" id="customRadio4" name="customRadio" class="custome-control-label"><label class="custome-control-label" for="customRadio4">Large (14")</li>
+                </ul>
+            </div>
+            <a href="#" class="btn btn-primary float-lg-right mt-3">Next Step <i class="fas fa-caret-right"></i></a>
+        </div>
+    </div>
+    <div class="card">
+        <h5 class="card-header bg-primary text-white">Choose Cheese and Sauce</h5>
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header">Cheese</div>
+                <form>
+                    <div class="form-group">
+                        <label class="exampleFormConrolSelect1">How Much?</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Light</option>
+                            <option>Normal</option>
+                            <option>Extra</option>
+                            <option>Double</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="card-header">Sauce</div>
+            <form>
+                <div class="form-group">
+                    <label class="exampleFormConrolSelect1">What Type?</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Tomato sauce</option>
+                        <option>Marinara sauce</option>
+                        <option>BBQ sauce</option>
+                        <option>Alfredo sauce</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="exampleFormConrolSelect1">How Much?</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Light</option>
+                        <option>Normal</option>
+                        <option>Extra</option>
+                    </select>
+                </div>
+            </form>
+            <div class="btn-group float-lg-right" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary"><i class="fas fa-caret-left"></i> Previous Step</button>
+                <button type="button" class="btn btn-primary">Next Step <i class="fas fa-caret-right"></i></button>
+            </div>
+        </div>
+    </div>
 
 
 
