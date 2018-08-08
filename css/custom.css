@@ -1,3 +1,6 @@
+.pizza-hero-jumbotron {
+    padding: 0em;
+}
 .pizza-hero-jumbotron h1 {
     padding: 2% 0;
     margin: 5% 0;
@@ -5,6 +8,9 @@
     background-color: #ffffff;
     border: 1px #ffffff;
     opacity: 0.6;
+}
+.toppings {
+    padding-left: 1em;
 }
 
 
