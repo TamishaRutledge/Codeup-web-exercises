@@ -79,7 +79,7 @@ var tip = prompt("How much to want to tip?");
 var bill = prompt("How much was your bill?");
 
 function calculateTip(tip, bill) {
-    return bill*tip;
+    return bill - (bill* (tip/100));
 }
 
 console.log("$" + (calculateTip(tip, bill)));
@@ -111,7 +111,7 @@ var actualPrice = prompt("How much was your item?");
 var percentDiscounted = prompt("How much is the discout?");
 
 function applyDiscount(actualPrice, percentDiscounted) {
-    return actualPrice - (actualPrice*percentDiscounted);
+    return actualPrice - (actualPrice* (percentDiscounted/100));
 }
 
 console.log(applyDiscount(actualPrice, percentDiscounted));
