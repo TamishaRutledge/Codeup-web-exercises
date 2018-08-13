@@ -214,3 +214,64 @@
 //
 // alert("Your discount number is: " + luckyNumber);
 // alert("Your total price is: $ " + calculateTotal(luckyNumber));
+
+// var hitMe = function () {
+//     return Math.floor((Math.random() * 100) + 1)
+// }
+// var count = 0;
+// if (confirm("Do you want to play a game?")) {
+//     while (count <= 21) {
+//         if (confirm("Your score is " + count + ". Do you want another card?")){
+//             count += hitMe();
+//         } else {
+//             break;
+//         }
+//     }
+//     if (count > 21) {
+//         alert("You busted!!!");
+//     }
+//     else {
+//         alert("Your score is " + count);
+//     }
+// }
+
+if (confirm("Do you want to play a game?")) {
+    var magicNumber = Math.floor((Math.random() * 100) + 1);
+    var ourGuess;
+
+    do {
+        ourGuess = parseInt(prompt("Guess a number between 1 and 100"))
+        if (ourGuess < magicNumber) {
+            alert("Your guess is too low");
+        } else if (ourGuess > magicNumber) {
+            alert("Your guess is too high");
+        }
+    } while (ourGuess !== magicNumber)
+    alert("Congratulations, you guessed it!!")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
