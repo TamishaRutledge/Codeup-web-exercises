@@ -33,3 +33,17 @@ for (var i = 100; i > 0; i-=5) {
     console.log(i);
 }
 
+function divisble(num) {
+    for (var i = 1; i<=100; i++){
+        if (i % 3 === 0){
+            console.log("Fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else if (i % 15 === 0) {
+            console.log("Fizzbuzz");
+        } else
+            console.log(i);
+    }
+}
+
+console.log(divisble(1));
