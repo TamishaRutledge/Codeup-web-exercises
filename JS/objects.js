@@ -58,7 +58,7 @@
         if (shopper.amount - 200 > 0) {
             console.log(shopper.name + ", your total amount was: $" + shopper.amount.toFixed(2) + "; you have received a 12% discount, you're new amount is: $" + (shopper.amount - (shopper.amount* (12 / 100))).toFixed(2));
         } else {
-            console.log(shopper.name + ", your total amount was: $" + shopper.amount.toFixed(2) + "; you have not purchased enough items to qualify for a discount. Your bill is: $" + shopper.amount);
+            console.log(shopper.name + ", your total amount was: $" + shopper.amount.toFixed(2) + "; you have not purchased enough items to qualify for a discount. Your bill is: $" + shopper.amount.toFixed(2));
         }
     });
 
@@ -153,14 +153,13 @@
      *      ...
      */
 
-// // Loop (element, index, array)
-//     for (var i = 0; i < array.length; i++){
-//
-//     }
-//     books.index = [i];
-//     books.title = [];
-//     books.author = [];
-
+// Loop (element, index, array)
+    for (var i = 0; i < books.length; i++){
+        console.log("Book # " + (i + 1));
+        console.log("Title: " + books[i].title);
+        console.log("Author: " + books[i].author.firstname + " " + books[i].author.lastname);
+        console.log("---------------")
+    }
 
 
     /**
