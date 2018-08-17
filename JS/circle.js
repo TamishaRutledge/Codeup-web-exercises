@@ -13,9 +13,9 @@
         logInfo: function (doRounding) {
             // TODO: complete this method.
                 if (doRounding){
-                    console.log(Math.round(circle.getArea()));
+                    console.log(Math.round(this.getArea()));
                 } else {
-                    console.log("Area of a circle with radius: " + this.radius + ", is: " + (circle.getArea()));
+                    console.log("Area of a circle with radius: " + this.radius + ", is: " + this.getArea());
                 }
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
@@ -37,3 +37,24 @@
     console.log("Circle information rounded to the nearest whole number");
     circle.logInfo(true);
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
