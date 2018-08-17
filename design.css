@@ -1,0 +1,819 @@
+/*UNIVERSAL RULES APPLICABLE ACROSS ALL DEVICES*/
+
+body{
+    background: #f0f0f0;
+}
+
+a { color: inherit; }
+
+.text-center, .col-xs-6, #idesign, #ihost, #isupport, #idevelop, #admin, #nib, #google {
+    font-family: 'Anton', sans-serif;
+    color: #000;
+}
+
+.nav-link, h5{
+    font-family: 'Abel', sans-serif;
+}
+
+#selectedWork, #codeUpDesign {
+    font-family: 'Abel', sans-serif!important;
+}
+
+hr{
+    width: 80%;
+    height: 10px;
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+                /*BEGINNING OF THE SMALL DEVICE*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+@media screen and (max-width:500px){
+    body {
+        margin-top: -95px;
+    }
+
+    #hidden-image {
+        visibility: hidden;
+        height: 50px;
+    }
+
+    #icon {
+        z-index: 1;
+        position: absolute;
+        top: -88px;
+        height: 175px;
+        left: 55%;
+        margin-left: -100px;
+    }
+
+    nav{
+        margin-left: -6px;
+    }
+
+    .circle {
+        margin-top: -2em;
+    }
+
+    #littleDevices, hr, #circles, .littleDevices{
+        display: none;
+    }
+
+    #smallestFeatured{
+        margin-left: 2.6rem!important;
+        margin-top: -5px;
+    }
+
+    #host {
+        display: table-cell;
+        height: 105px;
+        width: 105px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        background: #00aba9;
+        color: #fff;
+        font-size: 18px;
+        position: relative;
+        top: 42%;
+        border: white solid 8px;
+
+    }
+
+    #support {
+        display: table-cell;
+        height: 105px;
+        width: 105px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        background: #7cb06c;
+        color: #fff;
+        font-size: 18px;
+        position: relative;
+        top: 42%;
+        border: white solid 8px;
+    }
+
+    #develop {
+        display: table-cell;
+        height: 105px;
+        width: 105px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        background: #eb9d3a;
+        color: #fff;
+        font-size: 18px;
+        position: relative;
+        top: 42%;
+        border: white solid 8px;
+    }
+
+    #design {
+        display: table-cell;
+        height: 105px;
+        width: 105px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        background: #e6563b;
+        color: #000!important;
+        font-size: 18px;
+        position: relative;
+        top: 42%;
+        border: white solid 8px;
+    }
+
+    .parent {
+        width: 80%;
+    }
+
+    #child {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .border {
+        border: 8px solid #e6e6e6 !important;
+    }
+
+    #idesign {
+        display: table-cell;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        background: #e6563b;
+        /*font: 3px;*/
+        position: relative;
+        top: 42%;
+    }
+
+    #idevelop {
+        display: table-cell;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        background: #eb9d3a;
+        /*font: 9px;*/
+        position: relative;
+        top: 42%;
+    }
+
+    #isupport {
+        display: table-cell;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        background: #7cb06c;
+        /*font: 9px;*/
+        position: relative;
+        top: 42%;
+    }
+
+    #ihost {
+        display: table-cell;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        background: #00aba9;
+        /*font: 9px;*/
+        position: relative;
+        top: 42%;
+    }
+
+    #footer {
+        margin-bottom: 8px !important;
+    }
+} /*<!-- CONCLUSION OF VERY SMALL BROWSER WINDOW SECTION -->*/
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+            /*BEGINNING OF THE LITTLE DEVICE*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media screen and (min-width:500px) and (max-width:640px){
+    #hidden-image{
+        display: none;
+    }
+
+    #icon {
+        z-index: 1;
+        position: absolute;
+        top: -88px;
+        height: 175px;
+        left: 61%;
+        margin-left: -100px;
+    }
+
+    #topNav{
+        z-index: 1;
+        margin-top: -185px;
+    }
+
+    h1{
+        margin-top: 111px;
+    }
+
+    #littleFeaturedProjects{
+        font-size: .7em;
+        /* display: inline-block; */
+        margin-top: 1em;
+        position: absolute;
+        margin-left: -12px;
+
+    }
+
+
+    #topNav li:nth-child(3){
+    margin-left: 9.5em;
+    }
+
+    .circle {
+        margin-top: -2em;
+    }
+
+    #child{
+        display: none;
+    }
+
+    #littleImages {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .littleLetters{
+        margin-top: 8px;
+        position: absolute;
+        margin-left: -15px;
+    }
+
+    #smallest{
+        display: none;
+    }
+
+    #host {
+        background: #00aba9;
+    }
+
+    #support {
+        background: #7cb06c;
+    }
+
+    #develop {
+        background: #eb9d3a;
+    }
+
+    #design {
+        background: #e6563b;
+    }
+
+    #design, #develop, #support, #host {
+        display: table-cell;
+        height: 105px;
+        width: 105px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        color: #000!important;
+        font-size: 18px;
+        position: relative;
+        top: 42%;
+        border: white solid 8px;
+    }
+
+    #circleSmallestDevices{
+        display: none;
+    }
+
+    #idesign, #isupport, #idevelop, #ihost{
+        display: table-cell;
+        /*height: 18px;*/
+        width: 14px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        background: #00aba9;
+        /* position: absolute; */
+        /* margin-left: 30px; */
+        /* top: 92%; */
+        font-size: 10px;
+    }
+
+    .securityHeight{
+        min-height: 168px;
+    }/*HEIGHT OF IMAGE PROVIDED CAUSES CONFLICT WITH BOOTSTRAP'S UNIFORM STRUCTURE OF IMAGES IN COLUMNS WHICH REQUIRES THE HEIGHT OF IMAGE BE SPECIFICALLY TARGETED*/
+
+    #idesign {
+        background: #e6563b;
+    }
+
+    #idevelop {
+        background: #eb9d3a;
+    }
+
+    #isupport {
+        background: #7cb06c;
+    }
+
+    #ihost {
+        background: #00aba9;
+    }
+
+    #footer {
+        margin-bottom: 8px !important;
+    }
+
+} /*<!-- CONCLUSION OF SMALL BROWSER WINDOW SECTION -->*/
+
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+            /*BEGINNING OF THE MEDIUM DEVICE  (PLEASE MAKE NOTE OF NEED FOR ADJUSTMENT TO RESPONSIVENESS)
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media screen and (min-width:640px) and (max-width:1050px){
+    #hidden-image{
+        display: none;
+    }
+
+    #icon {
+        z-index: 1;
+        position: absolute;
+        top: -60px;
+        height: 110px;
+        margin: 0 -95%;
+    }
+
+    #topNav{
+        z-index: 1;
+        margin-top: -35px;
+        float: right;
+        font-size: 12px;
+    }
+
+    #topNav a{
+        padding: .6rem .7rem;
+    }
+
+    #subtitle{
+        margin-left: 3em;
+        font-size: 34px;
+        display: inline-block;
+        width: 75%;
+        margin-top: .5em;
+    }
+
+    #location{
+        font-size: 1.4em;
+        margin-top: 18px!important;
+    }
+
+    .mediumCodeupDesign{
+        position: absolute;
+        top: 0.1em;
+        margin-left: 5.7em;
+        font-size: x-large;
+    }
+
+    #whiterow {
+        padding: 1rem !important;
+    }
+
+    #host {
+        background: #00aba9;
+    }
+
+    #support {
+        background: #7cb06c;
+    }
+
+    #develop {
+        background: #eb9d3a;
+    }
+
+    #design {
+        background: #e6563b;
+    }
+
+    #design, #develop, #support, #host {
+        display: table-cell;
+        height: 105px;
+        width: 105px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        color: #fff!important;
+        font-size: 18px;
+        position: relative;
+        top: 42%;
+        border: white solid 8px;
+    }
+
+    #circleSmallestDevices {
+        display: none;
+    }
+
+    #littleImages{
+        display: none!important;
+    }
+
+    #littleDevices{
+        display: none!important;
+    }
+
+    .littleLetters{
+        display: none!important;
+    }
+
+    #child{
+        display: none;
+    }
+
+    #smallest{
+        display: none!important;
+    }
+
+    #littleFeaturedProjects{
+        display: none!important;
+    }
+
+    #mediumImages {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .mediumLetters{
+        /*position: absolute;*/
+        margin-left: -15px;
+        top: 0.6em;
+    }
+
+    #mediumFeaturedProjects{
+        font-size: .7em;
+        /* display: inline-block; */
+        margin-top: 1em;
+        position: absolute;
+        margin-left: -12px;
+
+    }
+
+    .securityHeight{
+        min-height: 168px;
+    }/*HEIGHT OF IMAGE PROVIDED CAUSES CONFLICT WITH BOOTSTRAP'S UNIFORM STRUCTURE OF IMAGES IN COLUMNS WHICH REQUIRES THE HEIGHT OF IMAGE BE SPECIFICALLY TARGETED*/
+
+    #idesign {
+        background: #e6563b;
+    }
+
+    #idevelop {
+        background: #eb9d3a;
+    }
+
+    #isupport {
+        background: #7cb06c;
+    }
+
+    #ihost {
+        background: #00aba9;
+    }
+
+    #idesign, #isupport, #idevelop, #ihost{
+        display: table-cell;
+        /*height: 18px;*/
+        width: 14px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        font-size: 10px;
+    }
+
+    .mediumtweets {
+        float: right;
+    }
+
+    .last {
+        position: relative;
+    }
+
+    #mobilphone {
+        height: 55px;
+        width: 55px;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    #headofman {
+        height: 55px;
+        width: 55px;
+        position: relative;
+    }
+
+    #coloripad {
+
+    }
+
+    #admin, #nib, #google {
+        font-weight: bold;
+    }
+
+    #admin {
+        position: absolute;
+        font-size: 20px;
+        padding-left: 4px;
+    }
+
+    #nib {
+        position: absolute;
+        font-size: 20px;
+        padding-left: 4px;
+    }
+
+    #coloripad {
+        height: 55px;
+        width: 55px;
+        position: relative;
+        margin-bottom: 30px;
+        margin-top: -12px;
+    }
+
+    #google {
+        position: absolute;
+        font-size: 20px;
+        padding-left: 4px;
+        margin-top: -14px;
+    }
+
+    #twitter {
+        height: 25px;
+        width: 25px;
+        position: relative;
+    }
+
+    #lorem {
+        font-family: 'Anton', sans-serif;
+        color: #000;
+        font-size: 6.5px;
+    }
+
+    #tweet {
+        margin-left: 10px;
+        font-family: 'Abel', sans-serif;
+        color: #000;
+        font-size: 15px;
+    }
+
+
+} /*<!-- CONCLUSION OF MEDIUM BROWSER WINDOW SECTION -->*/
+
+
+
+@media screen and (min-width:1000px){
+
+    .largescale {
+        max-width: 75%;
+        margin-left: 13%;
+        margin-top: 2%;
+    }
+
+    #hidden-image{
+        display: none;
+    }
+
+
+    #icon {
+        z-index: 1;
+        position: absolute;
+        top: -60px;
+        height: 110px;
+        margin: 0 -58%;
+    }
+
+    #topNav{
+        z-index: 1;
+        margin-top: -35px;
+        float: right;
+        font-size: 12px;
+        margin-right: 13%;
+    }
+
+    #topNav a{
+        padding: .6rem .7rem;
+    }
+
+    #subtitle{
+        margin-left: 3em;
+        font-size: 34px;
+        display: inline-block;
+        width: 75%;
+        margin-top: .5em;
+    }
+
+    #location{
+        font-size: 1.4em;
+        margin-top: 18px!important;
+    }
+
+    .mediumCodeupDesign{
+        position: absolute;
+        top: 0.1em;
+        margin-left: 14em;
+        font-size: x-large;
+    }
+
+    #whiterow {
+        padding: 1rem !important;
+        width: 107%;
+    }
+
+    #host {
+        background: #00aba9;
+    }
+
+    #support {
+        background: #7cb06c;
+    }
+
+    #develop {
+        background: #eb9d3a;
+    }
+
+    #design {
+        background: #e6563b;
+    }
+
+    #design, #develop, #support, #host {
+        display: table-cell;
+        height: 105px;
+        width: 105px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        color: #fff!important;
+        font-size: 18px;
+        position: relative;
+        top: 42%;
+        border: white solid 8px;
+    }
+
+    #circleSmallestDevices {
+        display: none;
+    }
+
+    #littleImages{
+        display: none!important;
+    }
+
+    #littleDevices{
+        display: none!important;
+    }
+
+    .littleLetters{
+        display: none!important;
+    }
+
+    #child{
+        display: none;
+    }
+
+    #smallest{
+        display: none!important;
+    }
+
+    #littleFeaturedProjects{
+        display: none!important;
+    }
+
+    #mediumImages {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .mediumLetters{
+        /*position: absolute;*/
+        margin-left: -15px;
+        top: 0.6em;
+    }
+
+    #mediumFeaturedProjects{
+        font-size: .7em;
+        /* display: inline-block; */
+        margin-top: 1em;
+        position: absolute;
+        margin-left: -12px;
+
+    }
+
+    .securityHeight{
+        min-height: 168px;
+    }/*HEIGHT OF IMAGE PROVIDED CAUSES CONFLICT WITH BOOTSTRAP'S UNIFORM STRUCTURE OF IMAGES IN COLUMNS WHICH REQUIRES THE HEIGHT OF IMAGE BE SPECIFICALLY TARGETED*/
+
+    #idesign {
+        background: #e6563b;
+    }
+
+    #idevelop {
+        background: #eb9d3a;
+    }
+
+    #isupport {
+        background: #7cb06c;
+    }
+
+    #ihost {
+        background: #00aba9;
+    }
+
+    #idesign, #isupport, #idevelop, #ihost{
+        display: table-cell;
+        /*height: 18px;*/
+        width: 14px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        font-size: 10px;
+    }
+
+
+    .last {
+        position: relative;
+    }
+
+    #mobilphone {
+        height: 55px;
+        width: 55px;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    #headofman {
+        height: 55px;
+        width: 55px;
+        position: relative;
+    }
+
+    #coloripad {
+
+    }
+
+    #admin, #nib, #google {
+        font-weight: bold;
+    }
+
+    #admin {
+        position: absolute;
+        font-size: 20px;
+        padding-left: 4px;
+    }
+
+    #nib {
+        position: absolute;
+        font-size: 20px;
+        padding-left: 4px;
+    }
+
+    #coloripad {
+        height: 55px;
+        width: 55px;
+        position: relative;
+        margin-bottom: 30px;
+        margin-top: -30px;
+    }
+
+    #google {
+        position: absolute;
+        font-size: 20px;
+        padding-left: 4px;
+        margin-top: -35px;
+    }
+
+    #twitter {
+        height: 25px;
+        width: 25px;
+        position: relative;
+    }
+
+    #lorem {
+        font-family: 'Anton', sans-serif;
+        color: #000;
+        font-size: 6.5px;
+    }
+
+    #tweet {
+        margin-left: 10px;
+        font-family: 'Abel', sans-serif;
+        color: #000;
+        font-size: 15px;
+    }
+} /*<!-- CONCLUSION OF LARGE BROWSER WINDOW SECTION -->*/
