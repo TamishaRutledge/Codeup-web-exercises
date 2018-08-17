@@ -104,7 +104,7 @@
             }
         },
         {
-            title: "Misadventures of Akward Black Girl",
+            title: "Misadventures of Awkward Black Girl",
             author: {
                 firstname: "Issa",
                 lastname: "Rae",
@@ -174,3 +174,21 @@
      */
 
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
