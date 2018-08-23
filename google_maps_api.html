@@ -18,14 +18,45 @@
      *
      * @param  {H.Map} map      A HERE Map instance within the application
      */
-    function moveMapToBerlin(map){
-        map.setCenter({lat:29.46, lng:98.37});
-        map.setZoom(15);
+    function moveMap(map){
+        map.setCenter({lat:29.5788, lng:-98.5147});
+        map.setZoom(14);
     }
 
+    // function addMarkersToMap(map) {
+    //     var meltingPotMarker = new H.map.Marker({lat: 29.5788, lng:-98.5147});
+    //     map.addObject(meltingPotMarker);
+    // }
 
+    function addMarkerToGroup(group, coordinate, html) {
+        var marker = new H.map.Marker(coordinate);
+        // add custom data to the marker
+        marker.setData(html);
+        group.addObject(marker);
+    }
 
+    function addInfoBubble(map) {
+        var group = new H.map.Group();
 
+        map.addObject(group);
+
+        // add 'tap' event listener, that opens info bubble, to the group
+        group.addEventListener('tap', function (evt) {
+            // event target is the marker itself, group is a parent event target
+            // for all objects that it contains
+            var bubble =  new H.ui.InfoBubble(evt.target.getPosition(), {
+                // read custom data
+                content: evt.target.getData()
+            });
+            // show info bubble
+            ui.addBubble(bubble);
+        }, false);
+
+        addMarkerToGroup(group, {lat:29.5788, lng:-98.5147},
+            '<div><a href=\'https://www.meltingpot.com/san-antonio-tx/ \' >The Melting Pot </a>' +
+            '</div><div ><br>4 Courses of Fine Fondue Fun!<br><br>Intimate Dining and Large Gathering</div>');
+
+    }
 
     /**
      * Boilerplate map initialization code starts below:
@@ -56,7 +87,9 @@
     var ui = H.ui.UI.createDefault(map, defaultLayers);
 
     // Now use the map as required...
-    moveMapToBerlin(map);
+    moveMap(map);
+    // addMarkersToMap(map);
+    addInfoBubble(map);
 </script>
 </body>
 </html>
