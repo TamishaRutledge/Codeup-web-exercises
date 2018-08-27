@@ -23,15 +23,36 @@
 <script>
     "use strict";
 
-    $('li').css('font-size', '20px');
-    $('li, h1, p').css('color', 'yellow');
-    $('.codeup').css('border', '1px solid red');
-
-    alert($('#head').text());
-
-    $(document).ready(function() {
-        alert( 'The DOM has finished loading!' );
+    $('#que').click(function() {
+        $("#que").css("background-color", "pink");
     });
+
+    $('p').dblclick(function () {
+        $('p').css("font-size", "18px");
+    });
+
+    $('li').hover(
+        function () {
+            $(this).css("color", "red");
+        },
+        function () {
+            $(this).css("color", "black");
+
+        }
+    );
+
+
+
+
+    // $('li').css('font-size', '20px');
+    // $('li, h1, p').css('background-color', 'yellow');
+    // $('.codeup').css('border', '1px solid red');
+    //
+    // alert($('#head').text());
+    //
+    // $(document).ready(function() {
+    //     alert( 'The DOM has finished loading!' );
+    // });
 
 </script>
 </body>
