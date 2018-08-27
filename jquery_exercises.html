@@ -9,6 +9,7 @@
 <h1 class="codeup" id="que">jQuery Introduction</h1>
 <hr>
     <p class="para" id="graph">Learning about jQuery</p>
+    <p class="para" id="graph">It does so many things</p>
     <div>
         <h4 class="codeup" id="head">Things to now about jQuery</h4>
         <ul>
@@ -24,11 +25,11 @@
     "use strict";
 
     $('#que').click(function() {
-        $("#que").css("background-color", "pink");
+        $(this).css("background-color", "pink");
     });
 
     $('p').dblclick(function () {
-        $('p').css("font-size", "18px");
+        $(this).css("font-size", "18px");
     });
 
     $('li').hover(
