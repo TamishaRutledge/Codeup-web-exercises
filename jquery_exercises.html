@@ -6,14 +6,33 @@
     <title>jQuery Intro</title>
 </head>
 <body>
-<h1>jQuery Introduction</h1>
+<h1 class="codeup" id="que">jQuery Introduction</h1>
+<hr>
+    <p class="para" id="graph">Learning about jQuery</p>
+    <div>
+        <h4 class="codeup" id="head">Things to now about jQuery</h4>
+        <ul>
+            <li class="list" id="item">jQuery has 3 versions</li>
+            <li class="list" id="item1">It is a library constructed off of a language</li>
+            <li class="list" id="item2">Any CSS selector is a valid jQuery selector</li>
+        </ul>
+    </div>
+
+
+
 <script>
     "use strict";
+
+    $('li').css('font-size', '20px');
+    $('li, h1, p').css('color', 'yellow');
+    $('.codeup').css('border', '1px solid red');
+
+    alert($('#head').text());
 
     $(document).ready(function() {
         alert( 'The DOM has finished loading!' );
     });
-</script>
 
+</script>
 </body>
 </html>
