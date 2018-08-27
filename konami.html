@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="./Js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+
+    $(document).keyup(function (e) {
+        if(e.keyCode == 13)
+        {
+            alert("You have added 30 lives!");
+        }
+    });
+</script>
+</body>
+</html>
