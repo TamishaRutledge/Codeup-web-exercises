@@ -13,9 +13,15 @@
         }
         .press{
             margin-left: 40%;
+            margin-top: 2%;
         }
         .press1{
             margin-left: 40%;
+            margin-top: 2%;
+        }
+        .parks{
+            display: none;
+            margin-bottom: 2%;
         }
     </style>
 </head>
@@ -58,7 +64,7 @@
     </dl>
 </div>
 <button class="press1"><h2>More Hot Takes!</h2></button>
-<section>
+<section class="parks">
     <ul class="parks1">
         <h3 class="lbj">Lyndon B. Johnson</h3>
         <li>Physical Address: 100 Ladybird Lane, Johnson City, TX 78636</li>
@@ -109,7 +115,13 @@
 
     $(document).ready(function () {
         $(".lbj").click(function () {
-            $('.parks1').children().css('font-weight', 'bold');
+            $(".parks1").children().css("font-weight", "bold");
+        });
+    });
+
+    $(document).ready(function () {
+        $(".lbj").dblclick(function () {
+            $(".parks1").children().removeAttr("style");
         });
     });
 
@@ -120,14 +132,34 @@
     });
 
     $(document).ready(function () {
+        $(".gm").dblclick(function () {
+            $(".parks2").children().removeAttr("style");
+        });
+    });
+
+    $(document).ready(function () {
         $(".sam").click(function () {
             $('.parks3').children().css('font-weight', 'bold');
         });
     });
 
+    $(document).ready(function () {
+        $(".sam").dblclick(function () {
+            $(".parks3").children().removeAttr("style");
+        });
+    });
 
+    $(document).ready(function () {
+        $("li").click(function () {
+            $(this).parent().children().first().next().css('color', 'blue');
+        });
+    });
 
-
+    $(document).ready(function () {
+        $(".press1").mouseenter(function() {
+            $(".parks").fadeIn("slow");
+        });
+    });
 
 </script>
 
