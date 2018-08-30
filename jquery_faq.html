@@ -19,15 +19,36 @@
             margin-left: 40%;
             margin-top: 2%;
         }
-        .parks{
+        .parks1{
             display: none;
-            margin-bottom: 2%;
+        }
+        .parks2{
+            display: none;
+        }
+        .parks3{
+            display: none;
+        }
+        #register{
+            text-align: center;
+        }
+        #newsletter{
+            text-align: center;
+        }
+        .close{
+            height: 50px;
+            width: 50px;
+            border-radius: 15px;
         }
     </style>
 </head>
 <body style="background-color: skyblue">
+<div class="alert alert-warning alert-dismissible" role="alert" id="newsletter">
+    <h1><strong>Would you like to sign up for our newsletter?</strong></h1>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+<h2 id="register">Please, register for more of these Hot Takes about National Parks.</h2>
 <button class="press"><h2>National Park Hot Takes!</h2></button>
-<div>
+<div>.
     <dl class="facts">
         <dt>What is the largest national park site?</dt>
         <dd class="invisible" style="color: #7E202C">Wrangell.</dd>
@@ -64,23 +85,23 @@
     </dl>
 </div>
 <button class="press1"><h2>More Hot Takes!</h2></button>
-<section class="parks">
+<section>
+    <h3 class="lbj">Lyndon B. Johnson</h3>
     <ul class="parks1">
-        <h3 class="lbj">Lyndon B. Johnson</h3>
         <li>Physical Address: 100 Ladybird Lane, Johnson City, TX 78636</li>
         <li>It is only closed on Thanksgiving, Christmas, and New Year's Day.</li>
         <li>The Texas White House is closed due to raising health/safety concerns arising from structural issues.</li>
         <li>They kindly ask that you refrain from picking the wildflowers.</li>
     </ul>
+    <h3 class="gm">Guadalupe Mountains</h3>
     <ul class="parks2">
-        <h3 class="gm">Guadalupe Mountains</h3>
         <li>Physical Address: 400 Pine Canyon, Salt Flat, TX 79847</li>
         <li>The four highest peaks in Texas.</li>
         <li>It is only closed on Christmas.</li>
         <li>There is a $5.00 entrance fee.</li>
     </ul>
+    <h3 class="sam">San Antonio Missions</h3>
     <ul class="parks3">
-        <h3 class="sam">San Antonio Missions</h3>
         <li>Physical Address: Visitor Center at Mission San José, 6701 San Jose Drive, San Antonio, TX 78214</li>
         <li>Site is closed on Thanksgiving, Christmas, and New Year's Day.</li>
         <li>Entrance to the park is free 99.</li>
@@ -94,22 +115,26 @@
     $("dt").css("font-size", "25px");
     $("dd").css("font-size", "20px");
 
-    $(document).ready(function(){
+
         $(".press").click(function(){
             $("dd").toggleClass("invisible");
 
         });
-    });
 
+    // THE NTH CHILD MAKES THIS CODE STATIC, AS YOU NEED TO MANUALLY COUNT THE ITEMS, next time use the (ul).children().last()...this makes it dynamic
     $(document).ready(function () {
         $(".press1").click(function () {
-            $("ul li:nth-child(5)").css("background-color", "yellow");
+            $("ul").each(function (index, element) {
+                $(element).children().last().css("background-color", "yellow");
+            })
         });
     });
 
     $(document).ready(function () {
         $(".press1").dblclick(function () {
-            $("ul li:nth-child(5)").removeAttr("style");
+            $("ul").each(function(index, element){
+              $(element).children().last().removeAttr("style");
+            })
         });
     });
 
@@ -151,14 +176,31 @@
 
     $(document).ready(function () {
         $("li").click(function () {
-            $(this).parent().children().first().next().css('color', 'blue');
+            $(this).parent().children().first().css('color', 'blue');
         });
     });
 
-    $(document).ready(function () {
-        $(".press1").mouseenter(function() {
-            $(".parks").fadeIn("slow");
-        });
+    $(".close").click(function () {
+        $("#newsletter").hide();
+    });
+
+    $(".lbj").click(function () {
+        $(".parks1").slideDown();
+    });
+
+    $(".gm").click(function () {
+        $(".parks2").slideDown();
+    });
+
+    $(".sam").click(function () {
+        $(".parks3").slideDown();
+    });
+
+    $(function(){
+        $('#register').hide();
+        setTimeout(function(){
+            $('#register').fadeIn('slow');
+        },8000);
     });
 
 </script>
