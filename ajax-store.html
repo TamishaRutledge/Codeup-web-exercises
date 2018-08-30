@@ -36,15 +36,13 @@
             console.log(item.price);
             console.log(item.categories);
         });
-        $.each(data, function() {
+        $.each(data, function(data, item) {
             var row='<tr>';
-            $.each(data, function(data, item) {
-                row+='<td>'+item.title+'</td>';
-                row+='<td>'+item.quantity+'</td>';
-                row+='<td>'+item.price+'</td>';
-                row+='<td>'+item.categories+'</td>';
-            });
-            row+='</tr>';
+            console.log(item);
+            row+='<td>'+item.title+'</td>';
+            row+='<td>'+item.quantity+'</td>';
+            row+='<td>'+item.price+'</td>';
+            row+='<td>'+item.categories+'</td>';
             $("#insertProducts").append(row);
         })
     });
