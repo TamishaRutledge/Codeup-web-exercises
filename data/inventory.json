@@ -37,6 +37,13 @@
         "tool",
         "powered"
     ],
-    "price": 45
+    "price": 40
+    }, {
+    "title": "Hack Saw",
+    "quantity": 10,
+    "categories": [
+        "tool"
+    ],
+    "price": 35
     }
 ]
