@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1533195059" />
+    <script type="text/javascript" src="./JS/jquery-2.2.4.js"></script>
     <title>Weather Map</title>
 </head>
 <body>
+<h1>San Antonio Weather</h1>
+<div id="parsed_json_api">
+    <table>
 
+    </table>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<script>
+
+
+    $(document).ready(function($) {
+
+        // var parsedData = $('#parsed_json_api');
+        // <!-- https://home.openweathermap.org/api_keys -->
+        var weatherKey = localStorage.getItem("weatherKey");
+
+        $.ajax({
+            url: "https://api.openweathermap.org/data/2.5/forecast",
+            dataType: 'json',
+            units: "imperial",
+            q: 4726206,
+            APPID: weatherKey,
+            cnt: 3,
+
+            success: function (data) {
+                data = JSON.stringify(data);
+                console.log(data);
+                // parsedData.append('<div>'+data+'</div>');
+            }
+        });
+    });
+
+
+
+</script>
 </body>
 </html>
