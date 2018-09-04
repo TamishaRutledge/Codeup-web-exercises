@@ -7,33 +7,15 @@
     <script type="text/javascript" src="./JS/jquery-2.2.4.js"></script>
     <title>Weather Map</title>
 </head>
-<body>
-<h1>San Antonio Weather</h1>
-<div id="parsed_json_api">
-    <table style="width:100%">
-        <tr>
-            <th>Day 1</th>
-            <th>Day 2</th>
-            <th>Day 3</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-</div>
-
+<body style="background-color: deepskyblue">
+<h1>Weather Application</h1>
+<br>
+<h2>San Antonio</h2>
+<main>
+<div id="parsed_json_api" style="float: left"></div>
+<div id="parsed_json_api1" style="float: left"></div>
+<div id="parsed_json_api2" style="float: left"></div>
+</main>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
 
 <!-- https://home.openweathermap.org/api_keys -->
@@ -42,14 +24,16 @@
 
     $(document).ready(function($) {
 
-        // var parsedData = $('#parsed_json_api');
-        var key = localStorage.getItem("weatherKey");
+        var parsedData = $('#parsed_json_api');
+        var parsedData1 = $('#parsed_json_api1');
+        var parsedData2 = $('#parsed_json_api2');
+        // var key = localStorage.getItem("weatherKey");
 
         //-------Getting a 401 error when I do not place the api key directly in the url??-------//
         $.get({
-            url: "https://api.openweathermap.org/data/2.5/weather?id=4726206&units=imperial&cnt=3",
+            url: "https://api.openweathermap.org/data/2.5/forecast?id=4726206&units=imperial&cnt=3&APPID=6bc418b963dbf2caa517392d6bada61e",
             dataType: 'json',
-            APPID: key,
+            // appid: key,
 
             success: function (data) {
                 //-----THIS PUTS THE WHOLE JSON OBJECT ON THE BROWSER PAGE-----//
@@ -57,10 +41,24 @@
                 console.log(data);
 
                 //-----TRYING TO PUT THE DATA IN A TABLE-------//
-                // parsedData.append('<div>'+data+'</div>');
-                // parsedData.append('<td>'this.weather[0]'</td>');
-                // parsedData.append('<td>'this.weather[1]'</td>');
-                // parsedData.append('<td>'this.weather[2]'</td>');
+                parsedData.append('<div><h3>'+data.list[0].main.temp_max+"&deg"+"/" +data.list[0].main.temp_min+"&deg"+'</h3></div>');
+                parsedData.append('<div><strong>Rain:</strong> '+data.list[0].weather[0].description+'</div>');
+                parsedData.append('<div><strong>Humidity:</strong> '+data.list[0].main.humidity+'</div>');
+                parsedData.append('<div><strong>Wind Speed:</strong> '+data.list[0].wind.speed+'</div>');
+                parsedData.append('<div><strong>Pressure:</strong> '+data.list[0].main.pressure+'</div>');
+
+                parsedData1.append('<div><h3>'+data.list[1].main.temp_max+"&deg"+"/" +data.list[1].main.temp_min+"&deg"+'</h3></div>');
+                parsedData1.append('<div><strong>Rain:</strong> '+data.list[1].weather[0].description+'</div>');
+                parsedData1.append('<div><strong>Humidity:</strong> '+data.list[1].main.humidity+'</div>');
+                parsedData1.append('<div><strong>Wind Speed:</strong> '+data.list[1].wind.speed+'</div>');
+                parsedData1.append('<div><strong>Pressure:</strong> '+data.list[1].main.pressure+'</div>');
+
+                parsedData2.append('<div><h3>'+data.list[2].main.temp_max+"&deg"+"/" +data.list[2].main.temp_min+"&deg"+'</h3></div>');
+                parsedData2.append('<div><strong>Rain:</strong> '+data.list[2].weather[0].description+'</div>');
+                parsedData2.append('<div><strong>Humidity:</strong> '+data.list[2].main.humidity+'</div>');
+                parsedData2.append('<div><strong>Wind Speed:</strong> '+data.list[2].wind.speed+'</div>');
+                parsedData2.append('<div><strong>Pressure:</strong> '+data.list[2].main.pressure+'</div>');
+
             }
         });
     });
