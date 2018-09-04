@@ -10,35 +10,57 @@
 <body>
 <h1>San Antonio Weather</h1>
 <div id="parsed_json_api">
-    <table>
-
+    <table style="width:100%">
+        <tr>
+            <th>Day 1</th>
+            <th>Day 2</th>
+            <th>Day 3</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
     </table>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
 
-
+<!-- https://home.openweathermap.org/api_keys -->
 <script>
 
 
     $(document).ready(function($) {
 
         // var parsedData = $('#parsed_json_api');
-        // <!-- https://home.openweathermap.org/api_keys -->
-        var weatherKey = localStorage.getItem("weatherKey");
+        var key = localStorage.getItem("weatherKey");
 
-        $.ajax({
-            url: "https://api.openweathermap.org/data/2.5/forecast",
+        //-------Getting a 401 error when I do not place the api key directly in the url??-------//
+        $.get({
+            url: "https://api.openweathermap.org/data/2.5/weather?id=4726206&units=imperial&cnt=3",
             dataType: 'json',
-            units: "imperial",
-            q: 4726206,
-            APPID: weatherKey,
-            cnt: 3,
+            APPID: key,
 
             success: function (data) {
-                data = JSON.stringify(data);
+                //-----THIS PUTS THE WHOLE JSON OBJECT ON THE BROWSER PAGE-----//
+                // data = JSON.stringify(data);
                 console.log(data);
+
+                //-----TRYING TO PUT THE DATA IN A TABLE-------//
                 // parsedData.append('<div>'+data+'</div>');
+                // parsedData.append('<td>'this.weather[0]'</td>');
+                // parsedData.append('<td>'this.weather[1]'</td>');
+                // parsedData.append('<td>'this.weather[2]'</td>');
             }
         });
     });
