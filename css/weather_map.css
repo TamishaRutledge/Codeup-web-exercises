@@ -4,28 +4,45 @@ body{
 
 .info{
     float: left;
-    background-color: lightslategray;
+    background-color: lightgrey;
+}
+
+.narc{
+    margin-right: -100em;
+    margin-left: 1.5em;
 }
 
 #parsed_json_api{
     border: 10px;
     border-color: black;
-    padding: 3%;
+    padding-left: 3%;
+    padding-bottom: 5%;
+    padding-right: 3%;
+    padding-top: 1%;
 }
 
 #parsed_json_api1{
-    border: 10px;
+    border-left: 10px;
     border-color: black;
-    padding: 3%;
+    padding-left: 3%;
+    padding-bottom: 5%;
+    padding-right: 3%;
+    padding-top: 1%;
 }
 
 #parsed_json_api2{
-    border: 10px;
+    border-left: 10px;
     border-color: black;
-    padding: 3%;
+    padding-left: 3%;
+    padding-bottom: 5%;
+    padding-right: 3%;
+    padding-top: 1%;
 }
 
 #map{
     float: left;
-    margin-top: 1em;
+    margin: 1.5em;
+    width: 80%;
+    height: 400px;
+    background: grey;
 }

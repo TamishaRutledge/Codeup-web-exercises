@@ -6,27 +6,29 @@
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1533195059" />
     <link rel="stylesheet" href="css/weather_map.css">
     <script type="text/javascript" src="./JS/jquery-2.2.4.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://js.api.here.com/v3/3.0/mapsjs-pano.js" ></script>
     <title>Weather Map</title>
 </head>
 <body>
 <h1>Weather Application</h1>
-<br>
 <h2>San Antonio</h2>
-<main>
+<main class="narc">
 <div class="info" id="parsed_json_api"></div>
 <div class="info" id="parsed_json_api1"></div>
 <div class="info" id="parsed_json_api2"></div>
 </main>
 <br>
 <section>
-    <div id="map" style="width: 100%; height: 400px; background: grey" />
+    <div id="map"/>
 </section>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
 
 <!-- https://home.openweathermap.org/api_keys -->
 <script>
-
-
     $(document).ready(function($) {
 
         var parsedData = $('#parsed_json_api');
@@ -67,6 +69,69 @@
             }
         });
     });
+</script>
+<script>
+    function moveMap(map){
+        map.setCenter({lat:29.4241, lng:-98.4937});
+        map.setZoom(4);
+    }
+
+
+    function addMarkerToGroup(group, coordinate, html) {
+        var marker = new H.map.Marker(coordinate);
+        // add custom data to the marker
+        marker.setData(html);
+        group.addObject(marker);
+    }
+
+    function addInfoBubble(map) {
+        var group = new H.map.Group();
+
+        map.addObject(group);
+
+        // add 'tap' event listener, that opens info bubble, to the group
+        group.addEventListener('tap', function (evt) {
+            // event target is the marker itself, group is a parent event target
+            // for all objects that it contains
+            var bubble =  new H.ui.InfoBubble(evt.target.getPosition(), {
+                // read custom data
+                content: evt.target.getData()
+            });
+            // show info bubble
+            ui.addBubble(bubble);
+        }, false);
+
+        addMarkerToGroup(group, {lat:29.4241, lng:-98.4937},
+            '<div><a href=\'https://visitsanantonio.com// \' >Remember the Alamo</a></div>');
+
+    }
+
+    var platform = new H.service.Platform({
+        app_id: 'Oi4nmj7BEQv6fMFB97sw',
+        app_code: 'Ew43XVW_Ih4gav8hTM0OxA',
+        useHTTPS: true
+    });
+    var pixelRatio = window.devicePixelRatio || 1;
+    var defaultLayers = platform.createDefaultLayers({
+        tileSize: pixelRatio === 1 ? 256 : 512,
+        ppi: pixelRatio === 1 ? undefined : 320
+    });
+
+    //Step 2: initialize a map  - not specificing a location will give a whole world view.
+    var map = new H.Map(document.getElementById('map'),
+        defaultLayers.normal.map, {pixelRatio: pixelRatio});
+
+    //Step 3: make the map interactive
+    // MapEvents enables the event system
+    // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+    var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+    // Create the default UI components
+    var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+    moveMap(map);
+    addInfoBubble(map);
+
 </script>
 </body>
 </html>
