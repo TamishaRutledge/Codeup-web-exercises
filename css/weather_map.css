@@ -1,0 +1,31 @@
+body{
+    background-color: deepskyblue;
+}
+
+.info{
+    float: left;
+    background-color: lightslategray;
+}
+
+#parsed_json_api{
+    border: 10px;
+    border-color: black;
+    padding: 3%;
+}
+
+#parsed_json_api1{
+    border: 10px;
+    border-color: black;
+    padding: 3%;
+}
+
+#parsed_json_api2{
+    border: 10px;
+    border-color: black;
+    padding: 3%;
+}
+
+#map{
+    float: left;
+    margin-top: 1em;
+}

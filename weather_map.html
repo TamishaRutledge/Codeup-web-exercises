@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1533195059" />
+    <link rel="stylesheet" href="css/weather_map.css">
     <script type="text/javascript" src="./JS/jquery-2.2.4.js"></script>
     <title>Weather Map</title>
 </head>
-<body style="background-color: deepskyblue">
+<body>
 <h1>Weather Application</h1>
 <br>
 <h2>San Antonio</h2>
 <main>
-<div id="parsed_json_api" style="float: left"></div>
-<div id="parsed_json_api1" style="float: left"></div>
-<div id="parsed_json_api2" style="float: left"></div>
+<div class="info" id="parsed_json_api"></div>
+<div class="info" id="parsed_json_api1"></div>
+<div class="info" id="parsed_json_api2"></div>
 </main>
+<br>
+<section>
+    <div id="map" style="width: 100%; height: 400px; background: grey" />
+</section>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
 
 <!-- https://home.openweathermap.org/api_keys -->
@@ -62,9 +67,6 @@
             }
         });
     });
-
-
-
 </script>
 </body>
 </html>
