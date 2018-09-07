@@ -38,11 +38,16 @@ const users = [
     }
 ];
 
-let  tripleLanguages = users.filter(user => user.language.length > 2 );
+//Always refresh the page so the console doesn't think you are trying to reassign const or lets//
+
+let  tripleLanguages = users.filter(user => user.languages.length > 2 );
 console.log(tripleLanguages);
 
 let emailAddresses = users.map(user => user.email);
 console.log(emailAddresses);
 
-let yearsInTheGame = users.reduce(user => user.yearsOfExperience);
-console.log(yearsInTheGame/5);
+const totalYears = users.reduce((total, user) => {
+    return total + user.yearsOfExperience/users.length;
+},0);
+ console.log(totalYears);
+
