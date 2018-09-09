@@ -50,16 +50,16 @@ const totalYears = users.reduce((total, user) => {
     return total + user.yearsOfExperience/users.length;
 },0);
  console.log(totalYears);
-
-// I DON'T NEED THE NUMBER 19....I NEED THE EMAIL STRING!!!!
+//
+// // I DON'T NEED THE NUMBER 19....I NEED THE EMAIL STRING!!!!
 let longestEmail = users.reduce((acc, user) => {
-    if (user.email.length > acc){
-        acc = user.email.length;
+    if (user.email.length > acc.length){
+        acc = user.email;
     }
     return acc;
 }, "");
  console.log(longestEmail);
 
-//WHY ARE THE THREE DOTS NEEDED???
-let allTheNames = users.reduce((prev, curr) => [...prev, curr.name], []).join(', ');
-console.log("Your instructors are:",allTheNames);
+//Eplisis is a spread syntax
+let allTheNames = users.reduce((prev, curr) => [prev, curr.name], []).join(',');
+console.log("Your instructors are" + allTheNames);
