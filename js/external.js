@@ -43,3 +43,12 @@
 // var prime = (time && premium);
 // var reg = (items && time);
 // alert("The validity of your coupon is: " + (prime || reg));
+
+
+var students = [a,b,m,k,p,t];
+
+function addStudents(a) {
+    students.push(a);
+};
+
+addStudents(jj);

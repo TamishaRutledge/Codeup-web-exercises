@@ -40,10 +40,10 @@
     "price": 40
     }, {
     "title": "Hack Saw",
-    "quantity": 10,
+    "quantity": 15,
     "categories": [
         "tool"
     ],
-    "price": 35
+    "price": 25
     }
 ]

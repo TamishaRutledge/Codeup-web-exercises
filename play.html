@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play</title>
+</head>
+<body>
+<h1 id="hello">Hello</h1>
+<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+
+<script>
+    $(function () {
+        console.log("Fact: ");
+        var id = prompt("Give us a number between 1 and 1000");
+        $.ajax("http://numbersapi.com/" + id)
+            .done(function (data) {
+                console.log(data);
+                $("#hello").text("Fact: "  + data);
+            })
+            .fail(function () {
+                console.log("oops");
+            })
+        console.log("Goodbye");
+    })
+
+    var car = {};
+    car.make = "Volvo";
+    car.model = "XC40";
+    car.speed = 0;
+    car.accelerate = function(){
+        this.speed++;
+    };
+    car.
+</script>
+</body>
+</html>

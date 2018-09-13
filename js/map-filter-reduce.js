@@ -46,15 +46,15 @@ console.log(tripleLanguages);
 let emailAddresses = users.map(user => user.email);
 console.log(emailAddresses);
 
-const totalYears = users.reduce((total, user) => {
-    return total + user.yearsOfExperience/users.length;
-},0);
- console.log(totalYears);
-//
-// // I DON'T NEED THE NUMBER 19....I NEED THE EMAIL STRING!!!!
+const totalYears = users.reduce((total, user) =>total + user.yearsOfExperience,0);
+console.log(totalYears);
+
+const totalYearsAverage = users.reduce((total, user) =>total + user.yearsOfExperience/users.length,0);
+console.log(totalYearsAverage);
+
 let longestEmail = users.reduce((acc, user) => {
     if (user.email.length > acc.length){
-        acc = user.email;
+        return user.email;
     }
     return acc;
 }, "");
@@ -63,3 +63,9 @@ let longestEmail = users.reduce((acc, user) => {
 //Eplisis is a spread syntax
 let allTheNames = users.reduce((prev, curr) => [prev, curr.name], []).join(',');
 console.log("Your instructors are" + allTheNames);
+
+console.log(users.reduce((message, user, i) => {
+    if (i < users.length -1)
+        return `${message} ${user.name},`;
+    else return `${message} and ${user.name}.`
+},"Your instructors are:"));

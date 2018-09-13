@@ -1,0 +1,91 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1 id="title">Hello World</h1>-->
+<!--<ul>-->
+    <!--<li>Turtle</li>-->
+    <!--<li>Lion</li>-->
+    <!--<li>Tiger</li>-->
+    <!--<li>Bear</li>-->
+    <!--<li>Field of Grain</li>-->
+    <!--<li>Beach</li>-->
+    <!--<li>River</li>-->
+    <!--<li>Lake</li>-->
+<!--</ul>-->
+
+<!--<script>-->
+    <!--function f() {-->
+        <!--for (var i = 0, l = listItems.length; i < l; i++) {-->
+            <!--if (i % 2 != 0) {-->
+
+            <!--}-->
+        <!--};-->
+    <!--})();-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!--Challenges:-->
+
+<!--Create a file named dom-challenge.html-->
+
+<!--0. The html should have a h1 that says "Hello World".-->
+
+<!--1. Add code that loops through an array of background images every 2 seconds. -->
+<!--For example, make a list of background images to be a turtle, a lion, a tiger, a bear, a field of grain, a beach, a river, and a lake.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<button id="btn1">Click Me!</button>
+<script>
+    'use strict';
+
+    // create a handler function
+    // var listener = function (event) {
+    //     alert('You clicked the button!');
+    // }
+    //
+    // // register the listener to handle clicks on btn1
+    // document.getElementById('btn1').addEventListener('click', listener, false);
+
+    var car = {
+        make: "Volvo",
+        model: "XC40",
+        year: 2018,
+        color: "BlueSteel",
+        speed: 0,
+        options: {
+            wifi: true,
+            transmission: "standard",
+            price: "MuchoDeniro"
+        },
+        accelerate: function (level) {
+            this.speed += level * 3;
+
+            },
+        brake: function (level) {
+            this.speed -= level * 5;
+
+            },
+        honk: true
+    }
+
+console.log(car);
+
+
+
+
+
+
+</script>
+</body>
+</html>

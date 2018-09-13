@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
 </head>
-<body>
-<button id="btn0">Click Me First!</button>
-<button id="btn1">Click Me Next!</button>
-<button id="btn2">Click Me After!</button>
-<button id="btn3">Click Me Last!</button>
+<body style="background-image: linear-gradient(to bottom right, #7cb06c, lightcoral)">
+<button id="btn0" style="background-color: lightpink; color: white">Click Me First!</button>
+<button id="btn1" style="background-color: pink; color: white">Click Me Next!</button>
+<button id="btn2" style="background-color: plum; color: white">Click Me After!</button>
+<button id="btn3" style="background-color: hotpink; color: white">Click Me Last!</button>
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -32,8 +32,8 @@
     (function() {
         "use strict";
 
-        var mainHeader = document.getElementById("main-header");
         var listenerZero = function (event) {
+            var mainHeader = document.getElementById("main-header");
             mainHeader.innerHTML = "JavaScript is Cool";
         }
 
@@ -42,8 +42,8 @@
 
                     // ************NEXT BUTTON************
 
-        var subHeader = document.getElementById("sub-header");
         var listenerOne = function (event) {
+            var subHeader = document.getElementById("sub-header");
             subHeader.style.color = "blue";
         }
 
@@ -52,8 +52,8 @@
 
                     // ************NEXT BUTTON************
 
-        var listItems = document.getElementsByTagName("li");
         var listenerTwo = function (event) {
+            var listItems = document.getElementsByTagName("li");
             for (var i = 0; i < listItems.length; i++) {
                 if (i % 2 === 0) {
                     listItems[i].style.color = 'grey';
@@ -66,8 +66,8 @@
 
                     // ************NEXT BUTTON************
 
-        var subParagraph = document.getElementsByClassName("sub-paragraph");
         var listenerThree = function (event) {
+            var subParagraph = document.getElementsByClassName("sub-paragraph");
             subParagraph[0].innerText = "Mission Accomplished!";
         }
 
@@ -112,8 +112,6 @@
         // subParagraph[0].innerText = "Mission Accomplished!";
 
     })();
-
-
 
 </script>
 </body>

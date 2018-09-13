@@ -11,8 +11,8 @@ function wait(milliSeconds) {
 wait(1000).then(() => console.log('You\'ll see this after 1 second'));
 wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
 
-function userCommits(username = 'TamishaRutledge') {
-    return fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': `token ${gitToken}`}})
+const userCommits = (username => {
+    return fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': `token: ${"gitToken"}`}})
         .then(response => response.json())
         .then(data => {
             for(event of data){
@@ -23,7 +23,9 @@ function userCommits(username = 'TamishaRutledge') {
             }
         })
         .then(url => {
-            return fetch(url, {headers: {'Authoriation': `token ${gitToken}`}});
+            return fetch(url, {headers: {'Authorization': `token: ${"gitToken"}`}});
         })
-}
- console.log(userCommits());
+});
+
+console.log(userCommits("TamishaRutledge"));
+
